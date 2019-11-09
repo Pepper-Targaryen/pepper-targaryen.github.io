@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Dream Big">
 <meta property="og:description" content="Docker is a software platform that allows you to build, test, and deploy applications quickly. In this post, we are going to install Docker and create an image for the test environment.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-09T05:10:28.053Z">
+<meta property="og:updated_time" content="2019-11-09T05:13:45.021Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Install Docker and Create Images">
 <meta name="twitter:description" content="Docker is a software platform that allows you to build, test, and deploy applications quickly. In this post, we are going to install Docker and create an image for the test environment.">
@@ -405,7 +405,7 @@
                 
               
 
-              <time title="Created: 2019-11-09 11:06:02 / Modified: 13:10:28" itemprop="dateCreated datePublished" datetime="2019-11-09T11:06:02+08:00">2019-11-09</time>
+              <time title="Created: 2019-11-09 11:06:02 / Modified: 13:13:45" itemprop="dateCreated datePublished" datetime="2019-11-09T11:06:02+08:00">2019-11-09</time>
             
 
             
@@ -462,8 +462,14 @@
 <p>We can check the network.</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network ls</span><br></pre></td></tr></table></figure>
 
-<h2 id="Pull-Ubuntu"><a href="#Pull-Ubuntu" class="headerlink" title="Pull Ubuntu"></a>Pull Ubuntu</h2><p>First we search Ubuntu. If the result is not ideal, we should consider changing the image source of Docker.<br>‘’’shell<br>docker search ubuntu</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Download the image with a specified version.</span><br><span class="line">```shell</span><br><span class="line">docker pull ubuntu:16.04</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">Check the images.</span><br><span class="line">```shell</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<h2 id="Pull-Ubuntu"><a href="#Pull-Ubuntu" class="headerlink" title="Pull Ubuntu"></a>Pull Ubuntu</h2><p>First we search Ubuntu. If the result is not ideal, we should consider changing the image source of Docker.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>Download the image with a specified version.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull ubuntu:16.04</span><br></pre></td></tr></table></figure>
+
+<p>Check the images.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
 
 <p>Run a container based on the image.</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it ubuntu:16.04 /bin/bash</span><br></pre></td></tr></table></figure>
