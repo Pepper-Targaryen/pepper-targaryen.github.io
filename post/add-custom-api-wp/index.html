@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-zh">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Pepper Targaryen">
+  
+  
+  
+  <link rel="prev" href="https://pepperf.ink/post/summer-intern/" />
+  <link rel="next" href="https://pepperf.ink/post/stop-wearing-others-shirts/" />
+  <link rel="canonical" href="https://pepperf.ink/post/add-custom-api-wp/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Add a custom API in WordPress | Pepper&#39;s Serendipity
+       
+  </title>
+  <meta name="title" content="Add a custom API in WordPress | Pepper&#39;s Serendipity">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/pepperf.ink"
+    },
+    "articleSection" : "post",
+    "name" : "Add a custom API in WordPress",
+    "headline" : "Add a custom API in WordPress",
+    "description" : "This post presents a method to create custom API endpoints in WordPress REST API (V2).\nWordPress REST API The WordPress REST API provides API endpoints for WordPress data types that allow developers to interact with sites remotely by sending and receiving JSON (JavaScript Object Notation) objects. When you send content to or make a request to the API, the response will be returned in JSON. This enables developers to create, read and update WordPress content from client-side JavaScript or from external applications, even those written in languages beyond PHP.",
+    "inLanguage" : "en-zh",
+    "author" : "Pepper Targaryen",
+    "creator" : "Pepper Targaryen",
+    "publisher": "Pepper Targaryen",
+    "accountablePerson" : "Pepper Targaryen",
+    "copyrightHolder" : "Pepper Targaryen",
+    "copyrightYear" : "2018",
+    "datePublished": "2018-08-08 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2018-08-08 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/pepperf.ink\/post\/add-custom-api-wp\/",
+    "wordCount" : "990",
+    "keywords" : [ "WordPress","php","api", "Pepper\x27s Serendipity"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://pepperf.ink">Pepper&#39;s Serendipity</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/post/" title="">文档</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="About">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://pepperf.ink">Pepper&#39;s Serendipity</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/post/" title="">文档</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="About">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Add a custom API in WordPress</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://pepperf.ink" rel="author">Pepper Targaryen</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2018-08-08 itemprop="datePublished">August 8, 2018</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>This post presents a method to create custom API endpoints in WordPress REST API (V2).</p>
+<h2 id="wordpress-rest-api">WordPress REST API</h2>
+<p>The <a href="https://wordpress.org/plugins/rest-api/">WordPress REST API</a> provides API endpoints for WordPress data types that allow developers to interact with sites remotely by sending and receiving JSON (JavaScript Object Notation) objects. When you send content to or make a request to the API, the response will be returned in JSON. This enables developers to create, read and update WordPress content from client-side JavaScript or from external applications, even those written in languages beyond PHP. There are several default key words like <code>posts</code>, <code>users</code>, <code>comments</code> and so on. To use one of these key words, we would just for example make a <code>GET</code> request to <code>https://example.com/wp-json/wp/v2/posts</code>. We would get a JSON response showing us all the posts of our website.</p>
+<h2 id="adding-custom-endpoints">Adding Custom Endpoints</h2>
+<p>The WordPress REST API is more than just a set of default routes. It is also a tool for creating custom routes and endpoints.</p>
+<p>Though <a href="https://v2.wp-api.org/extending/adding/">the official document</a> is very detailed, I still have some problems understanding the basic usage because I&rsquo;m not so familiar with the <code>PHP</code> language and some concepts are abstract. On one hand, I didn&rsquo;t know where to insert this part of code, while on the other hand, I didn&rsquo;t what kind of code works to satisfy my needs. I didn&rsquo;t fully understand how to add a custom endpoint until I finally found <a href="https://www.tychesoftwares.com/creating-custom-api-endpoints-in-the-wordpress-rest-api/">the blog of <em>Pinal Shah</em></a>, demonstrating several examples with full explanations. When I look back to the official document after having tried several examples of <em>Pinal Shah</em>, I start to understand what the official document really want to express. Still I have to say the official document is very detailed and it contains almost everything. If you don&rsquo;t understand it at the first time just like me, don&rsquo;t worry. Some examples can help you better understand.</p>
+<h2 id="example---api-for-mobile-applications">Example - API for mobile applications</h2>
+<p>What I want to do is quite simple. I hava a website on WordPress including a tool for OCR (Optical Charactor Recognization). A client could upload an image or a document like <code>pdf</code>, and then he would get the recognized text from the image. Instead of sending back the raw text from the detection, the tool would apply <code>Regex</code> to extract useful information. Let&rsquo;s say if a client could upload a electricity bill, the tool could help the client find his subscribing price, services fees&hellip;</p>
+<p>Anyway, our mobile applications also want to integrate this tool, but we kind of don&rsquo;t want to write this tool for another version of <code>Android</code> and <code>IOS</code>. It seems that writing a custom API could be the best solution and if we want to add new features to the tool, we would only have to modify the tool on the website.</p>
+<h3 id="creating-a-custom-endpoint">Creating a Custom Endpoint</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+  <span style="color:#a6e22e">add_action</span>( <span style="color:#e6db74">&#39;rest_api_init&#39;</span>, <span style="color:#e6db74">&#39;my_register_route&#39;</span> );
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">my_register_route</span>() {
+    <span style="color:#a6e22e">register_rest_route</span>( <span style="color:#e6db74">&#39;my-route&#39;</span>, <span style="color:#e6db74">&#39;pepper/(?P&lt;type&gt;[^/]+)/(?P&lt;id&gt;[\d]+)/(?P&lt;ext&gt;[^/]+)&#39;</span>, <span style="color:#66d9ef">array</span>(
+            <span style="color:#e6db74">&#39;methods&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;GET&#39;</span>,
+            <span style="color:#e6db74">&#39;callback&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;custom_phrase&#39;</span>,
+            <span style="color:#e6db74">&#39;args&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">array</span>(
+              <span style="color:#e6db74">&#39;type&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">array</span>( 
+                <span style="color:#e6db74">&#39;validate_callback&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">function</span>( $param, $request, $key ) {
+                  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">is_string</span>( $param );
+                }
+              ),
+              <span style="color:#e6db74">&#39;id&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">array</span>( 
+                <span style="color:#e6db74">&#39;validate_callback&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">function</span>( $param, $request, $key ) {
+                  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">is_numeric</span>( $param );
+                }
+              ),
+              <span style="color:#e6db74">&#39;ext&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">array</span>( 
+                <span style="color:#e6db74">&#39;validate_callback&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">function</span>( $param, $request, $key ) {
+                  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">is_string</span>( $param );
+                }
+              ),
+            ),
+          )
+        );
+  }
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">custom_phrase</span>($data) {
+    $results <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
+
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * The part of text detection. 
+</span><span style="color:#e6db74">    */</span>
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">rest_ensure_response</span>( $results );
+  }
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p><code>register_rest_route</code> is the function that we need to use to register a new route with WordPress. This function needs to be added in a function attached to the <code>rest_api_init</code> hook.</p>
+<p>The first argument in the <code>register_rest_route</code> function is the <strong>namespace</strong>. This namespace helps us to group together all our routes.</p>
+<p>It is extremely important to add namespaces to your routes. The “core” endpoints use the <code>wp/v2</code> namespace. The first part of the namespace is <code>wp</code>, which represents the vendor name; <code>WordPress</code> and <code>v2</code> is the version number. In my example, I used <code>my-route</code> as <strong>namespace</strong>.</p>
+<p>The second argument is the <strong>resource path</strong>. The resource path signifies what resource the endpoint is associated with (like posts, comments and so on). In our case, we will name it <code>pepper</code>.</p>
+<p>The <code>'/(?P&lt;type&gt;[^/]+)/(?P&lt;id&gt;[\d]+)/(?P&lt;ext&gt;[^/]+)'</code> after <code>'pepper'</code> indicates three parameters passed by the url.</p>
+<blockquote>
+<p><code>'?P'</code> means here goes a parameter. <code>'&lt;type&gt;'</code> means this parameter is named as <em>type</em>. And <code>'[^/]+'</code> is the regular expression searching for any string containing no <code>'/'</code>. <code>'[\d]+'</code> means a string of numbers.</p>
+</blockquote>
+<p>The third argument is an array of options. Here we specify what methods the endpoint can use and callback functions for each method. This argument also allows us to provide a permissions callback, which can restrict access for the endpoint to certain users.</p>
+<blockquote>
+<p><code>'validate_callback'</code> is used to pass a function that will be passed the value of the argument. That function should return true if the value is valid, and false if not.</p>
+</blockquote>
+<blockquote>
+<p><code>'sanitize_callback'</code> is used to pass a function that is used to sanitize the value of the argument before passing it to the main callback.</p>
+</blockquote>
+<p>Using <code>sanitize_callback</code> and <code>validate_callback</code> allows the main callback to act only to process the request, and prepare data to be returned using the <code>WP_REST_Response</code> class. By using these two callbacks, you will be able to safely assume your inputs are valid and safe when processing.</p>
+<p>Once this endpoint is created, you can access it at the below url <code>https://mysite.com/wp-json/my-route/pepper/images/1/jpeg</code></p>
+<p>The function <code>custom_phrase</code> will return the response to the client. We could have access to the passed parameters by calling <code>$data['type']</code>.</p>
+<p>In this example, I&rsquo;ve defined 3 parameters. <code>type</code> indicates wether it&rsquo;s <code>pdf</code> or <code>images</code>. <code>id</code> indicates the name of the file. And <code>ext</code> indicates the extension of the file.</p>
+<h3 id="use-the-custom-endpoint">Use the Custom Endpoint</h3>
+<p>On the mobile phone, there&rsquo;s nothing difficult to use the tool of the website.</p>
+<ol>
+<li>Find the desired image, whether it&rsquo;s in the gallery or just take one with the camera.</li>
+<li>Upload the image to the server.</li>
+<li>Make a <code>Request</code> to the custom endpoint by the url <code>https://mysite.com/wp-json/my-route/pepper/images/&lt;id&gt;/&lt;ext&gt;</code></li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Pepper Targaryen </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://pepperf.ink/post/add-custom-api-wp/>https://pepperf.ink/post/add-custom-api-wp/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://pepperf.ink/tags/wordpress/">
+                    #WordPress</a></span>
+            
+            <span class="tag"><a href="https://pepperf.ink/tags/php/">
+                    #php</a></span>
+            
+            <span class="tag"><a href="https://pepperf.ink/tags/api/">
+                    #api</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://pepperf.ink">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://pepperf.ink/post/summer-intern/" class="prev" rel="prev" title="In the middle of my summer intern in France"><i class="iconfont icon-left"></i>&nbsp;In the middle of my summer intern in France</a>
+         
+        
+        <a href="https://pepperf.ink/post/stop-wearing-others-shirts/" class="next" rel="next" title="Stop Wearing Others&#39; Shirts">Stop Wearing Others&#39; Shirts&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://pepperf.ink">Pepper Targaryen</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

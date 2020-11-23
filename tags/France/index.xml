@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>France on Pepper&#39;s Serendipity</title>
+    <link>https://pepperf.ink/tags/france/</link>
+    <description>Recent content in France on Pepper&#39;s Serendipity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-zh</language>
+    <lastBuildDate>Thu, 02 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://pepperf.ink/tags/france/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>In the middle of my summer intern in France</title>
+      <link>https://pepperf.ink/post/summer-intern/</link>
+      <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://pepperf.ink/post/summer-intern/</guid>
+      <description>This is my first post on the website
+Preface I&amp;rsquo;ve been constructing this website for about two weeks. This post should have been written long time ago. Finally, I got the time to write something about me. I am studying in Télécom ParisTech and it will still take me 1 year. After leaving Paris, I will come back to Shanghai Jiaotong University for another 1 year and a half and obtain my Master Degree.</description>
+    </item>
+    
+  </channel>
+</rss>

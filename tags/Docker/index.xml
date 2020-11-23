@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Pepper&#39;s Serendipity</title>
+    <link>https://pepperf.ink/tags/docker/</link>
+    <description>Recent content in Docker on Pepper&#39;s Serendipity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-zh</language>
+    <lastBuildDate>Sat, 09 Nov 2019 11:06:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://pepperf.ink/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install Docker and Create Images</title>
+      <link>https://pepperf.ink/post/docker-usage/</link>
+      <pubDate>Sat, 09 Nov 2019 11:06:02 +0000</pubDate>
+      
+      <guid>https://pepperf.ink/post/docker-usage/</guid>
+      <description>&lt;p&gt;Docker is a software platform that allows you to build, test, and deploy applications quickly. In this post, we are going to install Docker and create an image for the test environment.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
