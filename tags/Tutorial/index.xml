@@ -6,26 +6,35 @@
     <description>Recent content in Tutorial on Pepper&#39;s Serendipity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-zh</language>
-    <lastBuildDate>Sat, 09 Nov 2019 13:17:42 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2019 09:32:02 +0000</lastBuildDate>
     
 	<atom:link href="https://pepperf.ink/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>IP-tables.md</title>
+      <link>https://pepperf.ink/2019/ip-tables/</link>
+      <pubDate>Wed, 18 Dec 2019 09:32:02 +0000</pubDate>
+      
+      <guid>https://pepperf.ink/2019/ip-tables/</guid>
+      <description>&lt;p&gt;iptables is a user-space utility program that allows a system administrator to configure the tables provided by the Linux kernel firewall (implemented as different Netfilter modules) and the chains and rules it stores. iptables requires elevated privileges to operate and must be executed by user root.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Export Maven Project with Dependencies</title>
-      <link>https://pepperf.ink/post/export-maven-project/</link>
+      <link>https://pepperf.ink/2019/export-maven-project/</link>
       <pubDate>Sat, 09 Nov 2019 13:17:42 +0000</pubDate>
       
-      <guid>https://pepperf.ink/post/export-maven-project/</guid>
+      <guid>https://pepperf.ink/2019/export-maven-project/</guid>
       <description>&lt;p&gt;We want to export a Java-based project to an executable &lt;code&gt;jar&lt;/code&gt; file. The process to export a &lt;code&gt;jar&lt;/code&gt; file is not the same with a Maven Project which contains external denpendencies.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Install Docker and Create Images</title>
-      <link>https://pepperf.ink/post/docker-usage/</link>
+      <link>https://pepperf.ink/2019/docker-usage/</link>
       <pubDate>Sat, 09 Nov 2019 11:06:02 +0000</pubDate>
       
-      <guid>https://pepperf.ink/post/docker-usage/</guid>
+      <guid>https://pepperf.ink/2019/docker-usage/</guid>
       <description>&lt;p&gt;Docker is a software platform that allows you to build, test, and deploy applications quickly. In this post, we are going to install Docker and create an image for the test environment.&lt;/p&gt;</description>
     </item>
     

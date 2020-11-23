@@ -12,11 +12,20 @@
     
     
     <item>
-      <title>Management</title>
-      <link>https://pepperf.ink/categories/management/</link>
+      <title>管理</title>
+      <link>https://pepperf.ink/categories/%E7%AE%A1%E7%90%86/</link>
       <pubDate>Mon, 02 Mar 2020 16:50:50 +0800</pubDate>
       
-      <guid>https://pepperf.ink/categories/management/</guid>
+      <guid>https://pepperf.ink/categories/%E7%AE%A1%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://pepperf.ink/categories/linux/</link>
+      <pubDate>Wed, 18 Dec 2019 09:32:02 +0000</pubDate>
+      
+      <guid>https://pepperf.ink/categories/linux/</guid>
       <description></description>
     </item>
     
@@ -26,6 +35,24 @@
       <pubDate>Sun, 10 Nov 2019 22:10:03 +0000</pubDate>
       
       <guid>https://pepperf.ink/categories/%E5%81%A5%E8%BA%AB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>教程</title>
+      <link>https://pepperf.ink/categories/%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 09 Nov 2019 13:17:42 +0000</pubDate>
+      
+      <guid>https://pepperf.ink/categories/%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thoughts</title>
+      <link>https://pepperf.ink/categories/thoughts/</link>
+      <pubDate>Fri, 31 May 2019 01:41:23 +0000</pubDate>
+      
+      <guid>https://pepperf.ink/categories/thoughts/</guid>
       <description></description>
     </item>
     

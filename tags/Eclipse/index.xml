@@ -13,10 +13,10 @@
     
     <item>
       <title>Export Maven Project with Dependencies</title>
-      <link>https://pepperf.ink/post/export-maven-project/</link>
+      <link>https://pepperf.ink/2019/export-maven-project/</link>
       <pubDate>Sat, 09 Nov 2019 13:17:42 +0000</pubDate>
       
-      <guid>https://pepperf.ink/post/export-maven-project/</guid>
+      <guid>https://pepperf.ink/2019/export-maven-project/</guid>
       <description>&lt;p&gt;We want to export a Java-based project to an executable &lt;code&gt;jar&lt;/code&gt; file. The process to export a &lt;code&gt;jar&lt;/code&gt; file is not the same with a Maven Project which contains external denpendencies.&lt;/p&gt;</description>
     </item>
     

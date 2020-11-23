@@ -5,13 +5,13 @@
     <description>Recent content in Pepper&#39;s Serendipity on Pepper&#39;s Serendipity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-zh</language>
-    <lastBuildDate>Sun, 20 Aug 2017 16:38:52 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2020 16:33:00 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>About</title>
+      <title>关于</title>
       <link>https://pepperf.ink/about/</link>
-      <pubDate>Sun, 20 Aug 2017 16:38:52 +0800</pubDate>
+      <pubDate>Mon, 02 Mar 2020 16:33:00 +0800</pubDate>
       
       <guid>https://pepperf.ink/about/</guid>
       <description>&lt;p&gt;I am a Master student from Shanghai Jiao Tong University, majoring in computer engineering.&lt;/p&gt;
@@ -22,10 +22,10 @@
     
     <item>
       <title>Posts</title>
-      <link>https://pepperf.ink/post/</link>
+      <link>https://pepperf.ink/posts/</link>
       <pubDate>Mon, 02 Mar 2020 16:50:50 +0800</pubDate>
       
-      <guid>https://pepperf.ink/post/</guid>
+      <guid>https://pepperf.ink/posts/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-zh">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Pepper Targaryen">
+  
+  
+  
+  <link rel="prev" href="https://pepperf.ink/2019/stop-wearing-others-shirts/" />
+  <link rel="next" href="https://pepperf.ink/2019/export-maven-project/" />
+  <link rel="canonical" href="https://pepperf.ink/2019/docker-usage/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Install Docker and Create Images | Pepper&#39;s Serendipity
+       
+  </title>
+  <meta name="title" content="Install Docker and Create Images | Pepper&#39;s Serendipity">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/pepperf.ink"
+    },
+    "articleSection" : "posts",
+    "name" : "Install Docker and Create Images",
+    "headline" : "Install Docker and Create Images",
+    "description" : "\x3cp\x3eDocker is a software platform that allows you to build, test, and deploy applications quickly. In this post, we are going to install Docker and create an image for the test environment.\x3c\/p\x3e",
+    "inLanguage" : "en-zh",
+    "author" : "Pepper Targaryen",
+    "creator" : "Pepper Targaryen",
+    "publisher": "Pepper Targaryen",
+    "accountablePerson" : "Pepper Targaryen",
+    "copyrightHolder" : "Pepper Targaryen",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-11-09 11:06:02 \x2b0000 UTC",
+    "dateModified" : "2019-11-09 11:06:02 \x2b0000 UTC",
+    "url" : "https:\/\/pepperf.ink\/2019\/docker-usage\/",
+    "wordCount" : "587",
+    "keywords" : [ "Tutorial","Docker","Java","Ubuntu", "Pepper\x27s Serendipity"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://pepperf.ink">Pepper&#39;s Serendipity</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文档</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="关于">关于</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://pepperf.ink">Pepper&#39;s Serendipity</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文档</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="关于">关于</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Install Docker and Create Images</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://pepperf.ink" rel="author">Pepper Targaryen</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-11-09 itemprop="datePublished">November 9, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://pepperf.ink/categories/%E6%95%99%E7%A8%8B/"> 教程 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Docker is a software platform that allows you to build, test, and deploy applications quickly. In this post, we are going to install Docker and create an image for the test environment.</p>
+<h1 id="install-docker">Install Docker</h1>
+<p>Docker supports both Linux and Windows.</p>
+<h2 id="for-linux">For Linux:</h2>
+<p><a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/">This link should give you the tutorial for the installation of the community edition of Docker</a></p>
+<h2 id="for-windows">For Windows</h2>
+<p><a href="https://docs.docker.com/docker-for-windows/install/">This link should give you the tutorial for the installation of Docker Desktop for Windows</a></p>
+<h2 id="hello-world">Hello World</h2>
+<p>After the installation of Docker for our system, we should be able to test this.</p>
+<h3 id="ubuntu-terminal">Ubuntu Terminal</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo docker run hello-world
+</code></pre></div><h3 id="windows-powershell">Windows Powershell</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run hello-world
+</code></pre></div><h1 id="create-an-image">Create an Image</h1>
+<p>First we need to figure out what test environment we require. Here I want to test a Java-based Project so I am going to test this on an Ubuntu and install Java 8. Let&rsquo;s assume I have a laptop which installed Windows 10.</p>
+<h2 id="virtual-network">Virtual Network</h2>
+<p>This creates a virtual network named hadoop for DNS.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker network create --driver<span style="color:#f92672">=</span>bridge hadoop
+</code></pre></div><p>We can check the network.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker network ls
+</code></pre></div><h2 id="pull-ubuntu">Pull Ubuntu</h2>
+<p>First we search Ubuntu. If the result is not ideal, we should consider changing the image source of Docker.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker search ubuntu
+</code></pre></div><p>Download the image with a specified version.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull ubuntu:16.04
+</code></pre></div><p>Check the images.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker images
+</code></pre></div><p>Run a container based on the image.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -it ubuntu:16.04 /bin/bash
+</code></pre></div><p>Type <code>exit</code> to quit the container</p>
+<p>List all the running containers.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker ps
+</code></pre></div><p>If a container is closed, we can restart it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker start containerId
+</code></pre></div><p>or</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker start containerName
+</code></pre></div><p>Then we can enter the container.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec -it containerId /bin/bash
+</code></pre></div><h2 id="set-up-the-environment">Set up the Environment</h2>
+<p>Enter the container we started before.</p>
+<p>Change the source.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp /etc/apt/sources.list /etc/apt/sources_init.list
+rm /etc/apt/sources.list
+echo <span style="color:#e6db74">&#34;This is the source&#34;</span> &gt; /etc/apt/sources.list
+</code></pre></div><p>Here is the source of Aliyun.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">deb-src http://archive.ubuntu.com/ubuntu bionic main restricted <span style="color:#75715e">#Added by software-properties</span>
+deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted multiverse universe <span style="color:#75715e">#Added by software-properties</span>
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted multiverse universe <span style="color:#75715e">#Added by software-properties</span>
+deb http://mirrors.aliyun.com/ubuntu/ bionic universe
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates universe
+deb http://mirrors.aliyun.com/ubuntu/ bionic multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse <span style="color:#75715e">#Added by software-properties</span>
+deb http://archive.canonical.com/ubuntu bionic partner
+deb-src http://archive.canonical.com/ubuntu bionic partner
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted multiverse universe <span style="color:#75715e">#Added by software-properties</span>
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security universe
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security multiverse
+</code></pre></div><p>And update the changes.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">apt update
+</code></pre></div><p>Now we can install what we want.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">apt install openjdk-8-jdk
+</code></pre></div><p>We can test the Java version.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -version
+</code></pre></div><p>Other tools to be installed.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">apt install vim
+apt install net-tools
+apt install nmap
+</code></pre></div><p>Install SSH</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">apt-get install openssh-server
+apt-get install openssh-client
+</code></pre></div><p>To make the connection simple, we don&rsquo;t want to enter password when we try to connect.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd ~
+ssh-keygen -t rsa -P <span style="color:#e6db74">&#34;&#34;</span>
+</code></pre></div><p>Add the key to <code>authorized_keys</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cat .ssh/id_rsa.pub &gt;&gt; .ssh/authorized_keys
+</code></pre></div><p>Start SSH service.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">service ssh start
+</code></pre></div><p>We can try to SSH itself.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ssh 127.0.0.1
+</code></pre></div><p>Add the auto-start command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim ~/.bashrc
+</code></pre></div><p>Insert <code>service ssh start</code> at the end of the file.</p>
+<p>Save the container as our own image.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker commit -m <span style="color:#e6db74">&#34;hadoop&#34;</span> -a <span style="color:#e6db74">&#34;hadoop&#34;</span> containerId ourImageName
+</code></pre></div><h2 id="test">Test</h2>
+<p>We can now create several containers to launch the test.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -it --network hadoop -h <span style="color:#e6db74">&#34;h01&#34;</span> --name <span style="color:#e6db74">&#34;h01&#34;</span> -p 9870:9870 -p 8088:8088 ourImageName /bin/bash
+</code></pre></div><p>Another one</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -it --network hadoop -h <span style="color:#e6db74">&#34;h02&#34;</span> --name <span style="color:#e6db74">&#34;h02&#34;</span> ourImageName /bin/bash
+</code></pre></div><p>We can transfer our files from Windows laptop to containers.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker cp fileOrFolderPath containerId:Path
+</code></pre></div><h2 id="last-thing">Last Thing</h2>
+<p>This image I created is available on the Docker Hub, named <code>&quot;peppertargaryen/java8&quot;</code>.</p>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Pepper Targaryen </span>
+                </p>
+            
+           
+            
+            
+                    
+                    
+            
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://pepperf.ink/tags/tutorial/">
+                    #Tutorial</a></span>
+            
+            <span class="tag"><a href="https://pepperf.ink/tags/docker/">
+                    #Docker</a></span>
+            
+            <span class="tag"><a href="https://pepperf.ink/tags/java/">
+                    #Java</a></span>
+            
+            <span class="tag"><a href="https://pepperf.ink/tags/ubuntu/">
+                    #Ubuntu</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://pepperf.ink">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://pepperf.ink/2019/stop-wearing-others-shirts/" class="prev" rel="prev" title="Stop Wearing Others&#39; Shirts"><i class="iconfont icon-left"></i>&nbsp;Stop Wearing Others&#39; Shirts</a>
+         
+        
+        <a href="https://pepperf.ink/2019/export-maven-project/" class="next" rel="next" title="Export Maven Project with Dependencies">Export Maven Project with Dependencies&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://pepperf.ink">Pepper Targaryen</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

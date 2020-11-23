@@ -13,10 +13,10 @@
     
     <item>
       <title>Add a custom API in WordPress</title>
-      <link>https://pepperf.ink/post/add-custom-api-wp/</link>
+      <link>https://pepperf.ink/2018/add-custom-api-wp/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://pepperf.ink/post/add-custom-api-wp/</guid>
+      <guid>https://pepperf.ink/2018/add-custom-api-wp/</guid>
       <description>This post presents a method to create custom API endpoints in WordPress REST API (V2).
 WordPress REST API The WordPress REST API provides API endpoints for WordPress data types that allow developers to interact with sites remotely by sending and receiving JSON (JavaScript Object Notation) objects. When you send content to or make a request to the API, the response will be returned in JSON. This enables developers to create, read and update WordPress content from client-side JavaScript or from external applications, even those written in languages beyond PHP.</description>
     </item>

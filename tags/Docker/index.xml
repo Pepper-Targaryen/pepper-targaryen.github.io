@@ -13,10 +13,10 @@
     
     <item>
       <title>Install Docker and Create Images</title>
-      <link>https://pepperf.ink/post/docker-usage/</link>
+      <link>https://pepperf.ink/2019/docker-usage/</link>
       <pubDate>Sat, 09 Nov 2019 11:06:02 +0000</pubDate>
       
-      <guid>https://pepperf.ink/post/docker-usage/</guid>
+      <guid>https://pepperf.ink/2019/docker-usage/</guid>
       <description>&lt;p&gt;Docker is a software platform that allows you to build, test, and deploy applications quickly. In this post, we are going to install Docker and create an image for the test environment.&lt;/p&gt;</description>
     </item>
     
