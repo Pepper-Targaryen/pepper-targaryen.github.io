@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Pepper&#39;s Serendipity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-zh</language>
-    <lastBuildDate>Mon, 02 Mar 2020 16:50:50 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 14 Feb 2021 17:17:12 +0800</lastBuildDate>
     
 	<atom:link href="https://pepperf.ink/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>编程</title>
+      <link>https://pepperf.ink/categories/%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Sun, 14 Feb 2021 17:17:12 +0800</pubDate>
+      
+      <guid>https://pepperf.ink/categories/%E7%BC%96%E7%A8%8B/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>管理</title>

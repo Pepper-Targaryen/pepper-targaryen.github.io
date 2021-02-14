@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Pepper&#39;s Serendipity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-zh</language>
-    <lastBuildDate>Mon, 02 Mar 2020 16:50:50 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 14 Feb 2021 17:17:12 +0800</lastBuildDate>
     
 	<atom:link href="https://pepperf.ink/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>css</title>
+      <link>https://pepperf.ink/tags/css/</link>
+      <pubDate>Sun, 14 Feb 2021 17:17:12 +0800</pubDate>
+      
+      <guid>https://pepperf.ink/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>前端</title>
+      <link>https://pepperf.ink/tags/%E5%89%8D%E7%AB%AF/</link>
+      <pubDate>Sun, 14 Feb 2021 17:17:12 +0800</pubDate>
+      
+      <guid>https://pepperf.ink/tags/%E5%89%8D%E7%AB%AF/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Management</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程 on Pepper&#39;s Serendipity</title>
+    <link>https://pepperf.ink/categories/%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 编程 on Pepper&#39;s Serendipity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-zh</language>
+    <lastBuildDate>Sun, 14 Feb 2021 17:17:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://pepperf.ink/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title> CSS写法</title>
+      <link>https://pepperf.ink/2021/css%E5%86%99%E6%B3%95/</link>
+      <pubDate>Sun, 14 Feb 2021 17:17:12 +0800</pubDate>
+      
+      <guid>https://pepperf.ink/2021/css%E5%86%99%E6%B3%95/</guid>
+      <description>&lt;p&gt;工作中遇到的关于CSS的写法&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
